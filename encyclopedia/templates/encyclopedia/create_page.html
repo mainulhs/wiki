@@ -1,0 +1,31 @@
+<!-- create_page.html -->
+{% extends "encyclopedia/layout.html" %}
+
+{% block title %}
+    {{ title }}
+{% endblock %}
+
+{% block body %}
+  <h2>Create New Encyclopedia Entry</h2>
+  <!--Error message-->
+  {% if error_message %}
+    <div class="alert alert-danger" role="alert">
+    {{ error_message }}
+    </div>
+  {% endif %}
+  <form method="post">
+    {% csrf_token %}
+    <div class="form-group">
+      <label for="title">Title</label>
+      <input class="form-control" type="text" name="title" id="title" placeholder="Title">
+    </div>
+    <div class="form-group">
+      <label for="content">Content</label>
+      <textarea class="form-control" name="content" id="content" rows="10" placeholder="Content"></textarea>
+    </div>
+    <button type="submit" class="btn btn-primary">Create Entry</button>
+  </form>
+  <script>
+    CKEDITOR.replace( 'content' );
+  </script>
+{% endblock %}
