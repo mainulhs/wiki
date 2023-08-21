@@ -10,6 +10,7 @@ This project is part of the [CS50’s Web Programming with Python and JavaScript
 ## How to Run
 
 1. Clone this repository.
-2. In a terminal, navigate to the directory containing manage.py.
-3. Run `python manage.py runserver`.
-4. In a web browser, go to the URL provided by the terminal.
+2. Open a terminal window and navigate to the project folder.
+3. Install the required packages: `pip install -r requirements.txt`
+4. Run `python manage.py runserver` to start the server.
+5. In a web browser, go the URL provided by the terminal.
